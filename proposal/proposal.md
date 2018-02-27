@@ -54,6 +54,22 @@ theoretical analysis. Further, as the simulations take network effects such as
 bandwidth, jitter, and packet loss into account, they reveal important practical
 details that would otherwise be missed by a purely theoretical analysis.
 
+The objectives of this project are:
+
+-   Extend game-theoretical analysis in the following ways:
+    1.  **Repeated game analysis**: Extend preliminary analysis by increasing
+        the number of players in the analysis. Characterize how results with
+        small number of nodes generalizes to larger populations.
+    2.  **Evolutionary game theory**: If time allows, model the Bitswap game
+        using evolutionary game theory to give a more sophisticated analysis of
+        the large-scale dynamics.
+-   Create an run simulation testbed for Bitswap strategy analysis, with the
+    following goals:
+    1.  Simulate cases that reflect the theoretical analysis and compare results
+        under various network conditions.
+    2.  Implement developer-friendly API for configuring Bitswap strategies for
+        future testing.
+
 Progress
 ========
 
