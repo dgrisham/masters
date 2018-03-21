@@ -56,60 +56,64 @@ details that would otherwise be missed by a purely theoretical analysis.
 
 The objectives of this project are:
 
--   Extend game-theoretical analysis in the following ways:
-    1.  **Repeated game analysis**: Extend preliminary analysis by increasing
-        the number of players in the analysis. Characterize how results with
-        small number of nodes generalizes to larger populations.
-    2.  **Evolutionary game theory**: If time allows, model the Bitswap game
+-   **Simulations**
+    1.  **Strategy simulator**: Continue to build on the existing
+        [`strategy simulator`](https://github.com/dgrisham/strategy-sim)[^link:strategy-sim]
+        to empirically analyze strategies -- e.g. whether a particular strategy
+        might be a Nash equilibrium in certain cases.
+    2.  **Bitswap tests**: Continue work on writing tests that coordinate
+        interactions between IPFS nodes and measure the resulting dynamics.
+        These IPFS nodes run in Docker containers, so network conditions may be
+        simulated by configuring the containers' network interfaces. *If time
+        allows*, these tests will be extended to run on a network of separate
+        machines so that actual network conditions (rather than simulated) may
+        be tested. This work leverages
+        [IPTB](https://github.com/ipfs/iptb)[^link:iptb] and is currently
+        maintained in the [`bitswap-tests`
+        repository](https://github.com/dgrisham/bitswap-tests)[^link:bitswap-tests].
+-   **Analytical work**
+    1.  **Repeated game analysis**: Characterize smaller-scale systems
+        analytically. This can be used to prove whether a particular strategy is
+        a Nash equilibrium under certain conditions, encapsulate certain player
+        dynamics as a function of network parameters, etc. The analytical
+        results here reflect the simpler cases tested in the strategy simulator
+        (discussed above).
+    2.  **Evolutionary game theory**: *If time allows*, model the Bitswap game
         using evolutionary game theory to give a more sophisticated analysis of
         the large-scale dynamics.
--   Create an run simulation testbed for Bitswap strategy analysis, with the
-    following goals:
-    1.  Simulate cases that reflect the theoretical analysis and compare results
-        under various network conditions.
-    2.  Implement developer-friendly API for configuring Bitswap strategies for
-        future testing.
+
+[^link:strategy-sim]: <https://github.com/dgrisham/strategy-sim>
+[^link:iptb]: <https://github.com/ipfs/iptb>
+[^link:bitswap-tests]: <https://github.com/dgrisham/bitswap-tests>
 
 Progress
 ========
 
-Theory
-------
+Strategy Simulator
+------------------
 
-On the theory side, a specific formulation of the two player Bitswap game has
-been analyzed against the well-studied tit-for-tat (TFT) and grim trigger (GT)
-strategies[^note:analysis]. In summary, the results showed that neither TFT nor
-GT were subgame perfect Nash equilibria for this game. This analysis will be
-expanded in the following ways:
+The strategy simulator currently supports various configuration options for
+testing whether a particular Bitswap strategy is a Nash equilibrium. Please
+refer to the [`strategy-sim` Github
+repository](https://github.com/dgrisham/strategy-sim) for details on the
+purpose, options, and output of the simulator.
 
-[^note:analysis]: This preliminary analysis is included as a separate document.
+Go-IPFS and IPTB
+----------------
 
-1.  **Larger network sizes** -- This is crucial as the peers are weighted based
-    on their relative behaviors, so the results should be very different from
-    the two player game.
-2.  **Persistent reputations** -- The initial analysis only considered a peers'
-    behavior in the immediately preceding round, as opposed to taking the entire
-    history of the peer-wise interaction into account.
-3.  **Varying the strategy function** -- Strategy functions beyond the simple
-    linear function used in the initial analysis should be considered. This
-    becomes particularly important when the previous two points are applied.
+I have added the ability to specify a Bitswap strategy in
+[`go-ipfs`](https://github.com/ipfs/go-ipfs)[^go-ipfs-link]. `go-ipfs` is the
+primary, reference implementation of IPFS (written in the Go programming
+language) and the one that I will be using in my research. The Bitswap strategy
+is simply a function that takes a peer's reputation as input and produces a
+weight for that peer. These relative weights are then used in a single round of
+a weighted round robin queue, which distributes data to each of the peers in
+these relative quantities.
 
-Implementation
---------------
-
-On the implementation side, I have added the ability to specify a Bitswap
-strategy in [`go-ipfs`](https://github.com/ipfs/go-ipfs)[^go-ipfs-link].
-`go-ipfs` is the primary, reference implementation of IPFS (written in the Go
-programming language) and the one that I will be using in my research. The
-Bitswap strategy is simply a function that takes a peer's reputation as input
-and produces a weight for that peer. These relative weights are then used in a
-single round of a weighted round robin queue, which distributes data to each of
-the peers in these relative quantities.
-
-[^go-ipfs-link]: https://github.com/ipfs/go-ipfs
+[^go-ipfs-link]: <https://github.com/ipfs/go-ipfs>
 
 The next step is to set up a simulation testbed based in the [InterPlanetary
-TestBed](https://github.com/whyrusleeping/iptb)[^iptb-link] (IPTB). IPTB allows
+TestBed](https://github.com/whyrusleeping/iptb) (IPTB). IPTB allows
 the intialization and control of IPFS nodes within docker containers. Network
 parameters such as bandwidth and jitter may be configured between the
 containers and, since the containers are hosted on the same machine, this
@@ -118,9 +122,6 @@ actual networks provide.
 
 IPTB will serve two purposes:
 
-[^iptb-link]: https://github.com/whyrusleeping/iptb
-
-
 1.  Give a means of comparing my round-robin implementation of the Bitswap peer
     queue with the original peer queue. This will help verify that the new
     implementation performs at least as well as the old so that we can
@@ -128,6 +129,9 @@ IPTB will serve two purposes:
 2.  Provide a highly configurable and isolated testbed for initial simulation
     purposes. The game-theoretical results will be compared to the interactions
     between nodes using IPTB.
+
+The initial steps toward using IPTB for Bitswap testing are catalogued in the
+[`bitswap-tests` repository](https://github.com/dgrisham/bitswap-tests).
 
 Finally, while the IPTB makes simulations simpler to run and understand, we
 ultimately want to implement this research in real networks. The simulations
