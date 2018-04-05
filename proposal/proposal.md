@@ -6,12 +6,16 @@ author: David Grisham
 Introduction
 ============
 
-TODO: General intro
+The goal of this project is to analyze the resource allocation strategy space of
+peers interacting in an IPFS (InterPlanetary File System) network. A combination
+of analytical and empirical methods will be used to glean insights into the
+generally intractable strategy space that users are presented with when
+participating in an IPFS network.
 
 IPFS
 ----
 
-The InterPlanetary File System (IPFS) is a peer-to-peer hypermedia distribution
+IPFS is a peer-to-peer hypermedia distribution
 protocol developed by Protocol Labs. It is a content-addressed, versioned
 filesystem. While a variety of use cases exist for such a protocol, the most
 ambitious goal of the project is to replace HTTP as the primary file exchange
@@ -44,7 +48,13 @@ reflect changes in both the network and peer behavior.
 Objectives
 ----------
 
-TODO
+For this project, I will take the initial steps toward understanding the
+behavior of users in an IPFS network as predicted by game theoretical models.
+This will involve a combination of analytical and empirical approaches. The
+analytical work will focus on repeated games and, potentially, evolutionary
+games, while the empirical work will take a simulation-based approach. I intend
+to use these methods to classify various Bitswap strategy functions and
+determine useful strategies under certain conditions.
 
 Plan
 ====
