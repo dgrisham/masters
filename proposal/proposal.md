@@ -1,10 +1,12 @@
 ---
-title: Master's Thesis Proposal
+title: Game Theoretical Analysis of Resource Allocation in the InterPlanetary File System
 author: David Grisham
 ...
 
 Introduction
 ============
+
+TODO: General intro
 
 IPFS
 ----
@@ -40,7 +42,12 @@ allocations for the peers. These weights are periodically recalculated to
 reflect changes in both the network and peer behavior.
 
 Objectives
-==========
+----------
+
+TODO
+
+Plan
+====
 
 When considering peer reputations, an ideal Bitswap strategy function would
 reward long-lasting, healthy relationships and punish defectors. In order to
@@ -56,6 +63,16 @@ details that would otherwise be missed by a purely theoretical analysis.
 
 The objectives of this project are:
 
+-   **Analytical work**
+    1.  **Repeated game analysis**: Characterize smaller-scale systems
+        analytically. This can be used to prove whether a particular strategy is
+        a Nash equilibrium under certain conditions, encapsulate certain player
+        dynamics as a function of network parameters, etc. The analytical
+        results here reflect the simpler cases tested in the strategy simulator
+        (discussed above).
+    2.  **Evolutionary game theory**: *If time allows*, model the Bitswap game
+        using evolutionary game theory to give a more sophisticated analysis of
+        the large-scale dynamics.
 -   **Simulations**
     1.  **Strategy simulator**: Continue to build on the existing
         [`strategy simulator`](https://github.com/dgrisham/strategy-sim)[^link:strategy-sim]
@@ -71,23 +88,13 @@ The objectives of this project are:
         [IPTB](https://github.com/ipfs/iptb)[^link:iptb] and is currently
         maintained in the [`bitswap-tests`
         repository](https://github.com/dgrisham/bitswap-tests)[^link:bitswap-tests].
--   **Analytical work**
-    1.  **Repeated game analysis**: Characterize smaller-scale systems
-        analytically. This can be used to prove whether a particular strategy is
-        a Nash equilibrium under certain conditions, encapsulate certain player
-        dynamics as a function of network parameters, etc. The analytical
-        results here reflect the simpler cases tested in the strategy simulator
-        (discussed above).
-    2.  **Evolutionary game theory**: *If time allows*, model the Bitswap game
-        using evolutionary game theory to give a more sophisticated analysis of
-        the large-scale dynamics.
 
 [^link:strategy-sim]: <https://github.com/dgrisham/strategy-sim>
 [^link:iptb]: <https://github.com/ipfs/iptb>
 [^link:bitswap-tests]: <https://github.com/dgrisham/bitswap-tests>
 
-Progress
-========
+Preliminary Results
+===================
 
 Strategy Simulator
 ------------------
