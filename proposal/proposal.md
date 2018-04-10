@@ -6,21 +6,27 @@ author: David Grisham
 Introduction
 ============
 
-The goal of this project is to analyze the resource allocation strategy space of
-peers interacting in an IPFS (InterPlanetary File System) network. A combination
-of analytical and empirical methods will be used to glean insights into the
+The Internet is perhaps the largest and most consistent network that has ever
+existed. Unfortunately, it predominantly runs on the outdated hypermedia
+distribution protocol HTTP. The goal of the InterPlanetary File System (IPFS) is
+to upgrade the Internet to a distributed peer-to-peer system, thereby making it
+more robust and permanent. This new Internet would be a network of peers, as
+opposed to clients and servers, all sharing data between one another. In order
+for such a system to thrive, users must be cooperative and willing to share data
+with their peers. The goal of this project is to analyze the resource allocation
+strategy space of peers interacting in an IPFS network. A combination of
+analytical and empirical methods will be used to glean insights into the
 generally intractable strategy space that users are presented with when
 participating in an IPFS network.
 
 IPFS
 ----
 
-IPFS is a peer-to-peer hypermedia distribution
-protocol developed by Protocol Labs. It is a content-addressed, versioned
-filesystem. While a variety of use cases exist for such a protocol, the most
-ambitious goal of the project is to replace HTTP as the primary file exchange
-protocol used in the Internet. This could ultimately result in the
-decentralization of the Internet.
+IPFS is a peer-to-peer hypermedia distribution protocol developed by Protocol
+Labs. It is a content-addressed, versioned filesystem. While a variety of use
+cases exist for such a protocol, the most ambitious goal of the project is to
+replace HTTP as the primary file exchange protocol used in the Internet. This
+could ultimately result in the decentralization of the Internet.
 
 IPFS synthesizes various technologies developed since the Internet's inception.
 These technologies include Git, BitTorrent, distributed hash tables
