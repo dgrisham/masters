@@ -173,4 +173,117 @@ time.
 Timeline
 ========
 
+April
+-----
+
+### Week 3 (4/16 - 4/20)
+
+-   Analytical results (via Mathematica notebook)
+    -   Characterize results
+-   Start thesis layout
+-   IPTB simulations
+    -   Preparation, figure out important test cases
+
+### Week 4 (4/23 - 4/27)
+
+-   Thesis layout
+-   Analytical work
+    -   Figure out where to go based on results so far
+-   IPTB simulations
+    -   Preparation/running
+    -   Start working on visualizations for results
+
+May
+---
+
+### Week 1 (4/30 - 5/4)
+
+-   IPTB simulations
+    -   Re-evaluate progress and important test cases
+    -   Visualizations
+-   Analytical work
+    -   Continue trajectory from previous week
+-   Start writing thesis
+    -   Intro/background -- IPFS, Bitswap, motivation
+
+### Week 2 (5/7 - 5/11)
+
+-   IPTB simulations
+-   Analytical work
+    -   Figure out where to go based on results so far
+-   Thesis writing
+    -   Intro/background -- approach, why Bitswap analysis with game theory is
+        hard
+
+### Week 3 (5/14 - 5/18)
+
+-   IPTB simulations
+    -   Re-evaluate progress and important test cases
+-   Analytical work
+    -   Continue trajectory from previous week
+-   Thesis writing
+    -   Explain analytical results, use graphs from `strategy-sim` if helpful
+
+### Week 4 (5/23 - 5/25)
+
+-   IPTB simulations
+-   Analytical work
+    -   Continue trajectory from previous week
+-   Thesis writing
+    -   Explain analytical results, use graphs from `strategy-sim` if helpful
+    -   Start describing IPTB simulation testbed
+
+### Week 5 (5/28 - 6/1)
+
+-   IPTB simulations
+    -   Re-evaluate progress and important test cases
+-   Analytical work
+-   Thesis writing
+    -   Explain analytical results, use graphs from `strategy-sim` if helpful
+    -   Start describing IPTB simulation testbed
+
+June
+----
+
+-   Continue IPTB simulations
+    -   Re-evaluate current state periodically
+-   Analytical work
+    -   Loop on re-orienting trajectory + moving forward
+-   Thesis writing
+    -   Characterize results as they come
+    -   Plots and visualizations
+    -   Go to writing center to review formatting
+
+### Week 1 (6/4 - 6/8)
+
+
+### Week 2 (6/11 - 6/15)
+
+
+### Week 3 (6/18 - 6/22)
+
+
+### Week 4 (6/25 - 6/29)
+
+
+July
+----
+
+-   Analytical work should be done by this point
+-   Finish up simulations
+-   Primary focus: thesis
+    -   Visualizations, formatting, explaining results, etc.
+
+### Week 1 (7/2 - 7/6)
+
+
+### Week 2 (7/9 - 7/13)
+
+
+### Week 3 (7/16 - 7/20)
+
+
+### Week 4 (7/23 - 7/27)
+
+-   Tuesday, July 24th: Thesis submission due
 
