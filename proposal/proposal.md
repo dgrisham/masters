@@ -254,18 +254,6 @@ June
     -   Plots and visualizations
     -   Go to writing center to review formatting
 
-### Week 1 (6/4 - 6/8)
-
-
-### Week 2 (6/11 - 6/15)
-
-
-### Week 3 (6/18 - 6/22)
-
-
-### Week 4 (6/25 - 6/29)
-
-
 July
 ----
 
@@ -273,17 +261,4 @@ July
 -   Finish up simulations
 -   Primary focus: thesis
     -   Visualizations, formatting, explaining results, etc.
-
-### Week 1 (7/2 - 7/6)
-
-
-### Week 2 (7/9 - 7/13)
-
-
-### Week 3 (7/16 - 7/20)
-
-
-### Week 4 (7/23 - 7/27)
-
 -   Tuesday, July 24th: Thesis submission due
-
