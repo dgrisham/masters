@@ -18,6 +18,13 @@ problem intractable.
 This is in-progress, and can be found
 [here](https://github.com/ipfs/go-ipfs/pull/3982).
 
+The [`bitswap-tests` repo](https://github.com/dgrisham/bitswap-tests) uses
+[IPTB](https://github.com/ipfs/iptb) to run tests related to Bitswap strategies.
+This repo is in its early stages, but currently just wraps IPTB calls into shell
+scripts. In particular, we spin up Docker nodes running IPFS instances, connect
+the nodes based on some topology, have them exchange data, and measure the
+Bitswap state during/after the data exchange.
+
 ## Deprecated
 
 An older analysis that uses a now deprecated game-theoretical model of Bitswap
