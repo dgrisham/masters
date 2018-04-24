@@ -7,7 +7,7 @@ Materials for my Master's thesis work.
 The Bitswap strategy simulator repository is closely related to this work -- see
 [here](https://github.com/dgrisham/strategy-sim).
 
-The [strategy analysis Mathematica notbook](./strategy-analysis.nb) sets up the
+The [strategy analysis Mathematica notebook](./strategy-analysis.nb) sets up the
 problem simulated by `strategy-sim` symbolically and finds the solutions
 analytically. At the moment, only the linear reciprocation function is supported
 in this notebook, as other reciprocation functions (e.g. `Tanh`) make the
@@ -20,7 +20,7 @@ This is in-progress, and can be found
 
 The [`bitswap-tests` repo](https://github.com/dgrisham/bitswap-tests) uses
 [IPTB](https://github.com/ipfs/iptb) to run tests related to Bitswap strategies.
-This repo is in its early stages, but currently just wraps IPTB calls into shell
+This repo is in its early stages, but currently just wraps IPTB calls in shell
 scripts. In particular, we spin up Docker nodes running IPFS instances, connect
 the nodes based on some topology, have them exchange data, and measure the
 Bitswap state during/after the data exchange.
