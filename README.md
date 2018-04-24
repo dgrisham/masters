@@ -4,7 +4,7 @@ Materials for my Master's thesis work.
 
 ## strategy-sim
 
-The Bitswap strategy simulator repository is very related to this work -- see
+The Bitswap strategy simulator repository is closely related to this work -- see
 [here](https://github.com/dgrisham/strategy-sim).
 
 The [strategy analysis Mathematica notbook](./strategy-analysis.nb) sets up the
