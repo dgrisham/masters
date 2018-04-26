@@ -1,15 +1,15 @@
 ---
 title: Game Theoretical Analysis of Resource Allocation in the InterPlanetary File System
 author: David Grisham
-date: 30 April 2018
+date: TBD
 theme: Amsterdam
 ...
 
 Background
 ==========
 
-IPFS
-----
+IPFS (InterPlanetery File System)
+---------------------------------
 
 -   P2P hypermedia distribution protocol
 -   Content-addressed, versioned filesystem
@@ -27,8 +27,8 @@ Bitswap
 
 -   IPFS's block exchange protocol
 -   Inspired by BitTorrent
--   *Strategy function*
-    -   Input metrics
+-   *Given a set of peers who want data, how to allocate resources?*
+    -   Strategy function
 
 Objectives
 ----------
@@ -45,13 +45,17 @@ Analytical Work
 ---------------
 
 1.  **Repeated game analysis**
-2.  **Evolutionary game theory**
+    -   Balance model accuracy with complexity
+2.  **Evolutionary game theory** (if time allows)
+    -   Good model, but high complexity
 
 Simulations
 -----------
 
-1.  **Straetgy simulator**
+1.  **Strategy simulator**
+    -   Complements repeated game analysis
 2.  **Bitswap tests**
+    -   Test actual IPFS nodes
 
 Progress and Preliminary Results
 ================================
