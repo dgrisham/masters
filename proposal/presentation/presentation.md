@@ -49,16 +49,6 @@ Objectives
 System Model
 ============
 
-Process
--------
-
--   Multiple iterations
-    -   *Complexity* vs.\ *accuracy*
--   Attempted tools
-    -   Evolutionary game theory
-    -   Statistical mechanics
-    -   **Repeated games**
-
 IPFS Network as Graph
 ---------------------
 
@@ -76,21 +66,8 @@ $$
 d_{ji}^t = \frac{b_{ji}^{t-1}}{b_{ij}^{t-1}\:+\:1}
 $$
 
-Game Formulation
-----------------
-
-### Characteristics
-
--   *Players*: Users/nodes
--   *Infinitely repeated*
-    -   Discrete rounds, denoted by $t$
--   *Static*
--   *Incomplete information*
-
-Game Formulation
-----------------
-
-### Strategy
+Strategy
+--------
 
 -   Reciprocation function
     -   *Input*: peer debt ratio
@@ -98,8 +75,31 @@ Game Formulation
     -   $S_j(d_{ji}^t, \mathbf{d}_j^{-i,t}) \in \{0, 1\}$
 -   Peers served via weighted round-robin
 
+Game Formulation
+----------------
+
+-   *Players*: Users/nodes
+-   *Infinitely repeated*
+    -   Discrete rounds, denoted by $t$
+-   *Static*
+-   *Incomplete information*
+
+Goal
+----
+
+**TODO**
+
 Preliminary Results
 ===================
+
+Model Iterations
+----------------
+
+-   *Complexity* vs.\ *accuracy*
+-   Attempted tools
+    -   Evolutionary game theory
+    -   Statistical mechanics
+    -   **Repeated games**
 
 Strategy Simulator
 ------------------
