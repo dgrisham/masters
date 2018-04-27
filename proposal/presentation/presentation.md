@@ -83,9 +83,26 @@ Data Distribution
 **TODO: show this with math**
 
 Game Formulation
+================
+
+Model Iterations
 ----------------
 
+-   *Complexity* vs.\ *accuracy*
+-   Attempted tools
+    -   Evolutionary game theory
+    -   Statistical mechanics
+    -   **Repeated games**
+
+Players
+-------
+
 -   *Players*: Users/nodes
+-   *Strategy*: Reciprocation function
+
+Game Characteristics
+--------------------
+
 -   *Infinitely repeated*
     -   Discrete rounds, denoted by $t$
 -   *Static*
@@ -98,15 +115,6 @@ Goal
 
 Preliminary Results
 ===================
-
-Model Iterations
-----------------
-
--   *Complexity* vs.\ *accuracy*
--   Attempted tools
-    -   Evolutionary game theory
-    -   Statistical mechanics
-    -   **Repeated games**
 
 Strategy Simulator
 ------------------
