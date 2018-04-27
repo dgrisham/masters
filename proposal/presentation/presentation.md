@@ -66,14 +66,21 @@ $$
 d_{ji}^t = \frac{b_{ji}^{t-1}}{b_{ij}^{t-1}\:+\:1}
 $$
 
-Strategy
---------
+Reciprocation Function
+----------------------
 
--   Reciprocation function
-    -   *Input*: peer debt ratio
-    -   *Output*: peer weight
-    -   $S_j(d_{ji}^t, \mathbf{d}_j^{-i,t}) \in \{0, 1\}$
+-   *Input*: Peer debt ratio
+-   *Output*: Peer weight
+-   $S_j(d_{ji}^t, \mathbf{d}_j^{-i,t}) \in [0, 1]$
+    -   e.g. $S_j(d_{ji}^t, \mathbf{d}_j^{-i,t}) = d_{ji}^t$
+
+Data Distribution
+-----------------
+
 -   Peers served via weighted round-robin
+    -   $B$ bits distributed to peers based on relative weights
+
+**TODO: show this with math**
 
 Game Formulation
 ----------------
