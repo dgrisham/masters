@@ -46,6 +46,54 @@ Objectives
 -   **Analytical work:** Repeated game model
 -   **Empirical work:** Simulations
 
+System Model
+============
+
+Process
+-------
+
+-   Multiple iterations
+    -   *Complexity* vs.\ *accuracy*
+-   Attempted tools
+    -   Evolutionary game theory
+    -   Statistical mechanics
+    -   **Repeated games**
+
+IPFS Network as Graph
+---------------------
+
+-   *Nodes*: Users
+-   *Edges*: Peerings; unweighted, undirected
+
+Game
+----
+
+-   *Infinitely repeated*
+    -   Discrete rounds, denoted by $t$
+-   *Static*
+-   *Incomplete information*
+
+Reputation
+----------
+
+-   $b_{ji}^t$: Total bits sent from user $j$ to peer $i$ from round $0$ to
+    $t-1$
+-   $d_{ji}$: *debt ratio* $j$ to peer $i$
+
+$$
+d_{ji}^t = \frac{b_{ji}^{t-1}}{b_{ij}^{t-1}\:+\:1}
+$$
+
+Strategy
+--------
+
+-   Reciprocation function
+    -   *Input*: peer debt ratio
+    -   *Output*: peer weight
+    -   $S_j(d_{ji}^t, \mathbf{d}_j^{-i,t}) \in \{0, 1\}$
+-   Peers served via weighted round-robin
+
+
 Plan
 ====
 
@@ -67,60 +115,6 @@ Simulations
 
 Preliminary Results
 ===================
-
-System Model
-------------
-
-### Process
-
--   Multiple iterations
-    -   *Complexity* vs.\ *accuracy*
--   Attempted tools
-    -   Evolutionary game theory
-    -   Statistical mechanics
-    -   **Repeated games**
-
-System Model
-------------
-
-### IPFS Network as Graph
-
--   *Nodes*: Users
--   *Edges*: Peerings; unweighted, undirected
-
-System Model
-------------
-
-### Game
-
--   *Infinitely repeated*
-    -   Discrete rounds, denoted by $t$
--   *Static*
--   *Incomplete information*
-
-System Model
-------------
-
-### Reputation
-
--   $b_{ji}^t$: Total bits sent from user $j$ to peer $i$ from round $0$ to
-    $t-1$
--   $d_{ji}$: *debt ratio* $j$ to peer $i$
-
-$$
-d_{ji}^t = \frac{b_{ji}^{t-1}}{b_{ij}^{t-1}\:+\:1}
-$$
-
-System Model
-------------
-
-### Strategy
-
--   Reciprocation function
-    -   *Input*: peer debt ratio
-    -   *Output*: peer weight
-    -   $S_j(d_{ji}^t, \mathbf{d}_j^{-i,t}) \in \{0, 1\}$
--   Peers served via weighted round-robin
 
 **TODO: graphic for this?**
 
