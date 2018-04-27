@@ -94,25 +94,6 @@ Strategy
 -   Peers served via weighted round-robin
 
 
-Plan
-====
-
-Analytical Work
----------------
-
-1.  **Repeated game analysis**
-    -   Balances model accuracy with complexity
-2.  **Evolutionary game theory** (if time allows)
-    -   Good model, but high complexity
-
-Simulations
------------
-
-1.  **Strategy simulator**
-    -   Complements repeated game analysis
-2.  **Bitswap tests**
-    -   Test actual IPFS nodes
-
 Preliminary Results
 ===================
 
@@ -154,6 +135,25 @@ Go-IPFS and IPTB
 -   Beta strategy-integration into `go-ipfs`
 -   IPTB: IPFS nodes in Docker containers
 -   Scripted tests
+
+Plan
+====
+
+Analytical Work
+---------------
+
+1.  **Repeated game analysis**
+    -   Balances model accuracy with complexity
+2.  **Evolutionary game theory** (if time allows)
+    -   Good model, but high complexity
+
+Simulations
+-----------
+
+1.  **Strategy simulator**
+    -   Complements repeated game analysis
+2.  **Bitswap tests**
+    -   Test actual IPFS nodes
 
 Timeline
 ========
