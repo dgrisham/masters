@@ -85,6 +85,12 @@ Data Distribution
 Game Formulation
 ================
 
+Players
+-------
+
+-   *Players*: Users/nodes
+-   *Strategy*: Reciprocation function
+
 Model Iterations
 ----------------
 
@@ -93,12 +99,6 @@ Model Iterations
     -   Evolutionary game theory
     -   Statistical mechanics
     -   **Repeated games**
-
-Players
--------
-
--   *Players*: Users/nodes
--   *Strategy*: Reciprocation function
 
 Game Characteristics
 --------------------
