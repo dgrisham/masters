@@ -41,6 +41,8 @@ Bitswap
 Objectives
 ----------
 
+**TODO: describe using terminology defined already, no more**
+
 -   Classify Bitswap strategy functions
     -   Conditions where useful
 -   **Analytical work:** Repeated game model
@@ -85,17 +87,19 @@ Data Distribution
 Game Formulation
 ================
 
-Players
--------
+
+---
 
 -   *Players*: Users/nodes
 -   *Strategy*: Reciprocation function
+
+**TODO: utility function**
 
 Model Iterations
 ----------------
 
 -   *Complexity* vs.\ *accuracy*
--   Attempted tools
+-   Attempted formulations
     -   Evolutionary game theory
     -   Statistical mechanics
     -   **Repeated games**
@@ -105,13 +109,19 @@ Game Characteristics
 
 -   *Infinitely repeated*
     -   Discrete rounds, denoted by $t$
--   *Static*
 -   *Incomplete information*
 
-Goal
-----
+**TODO: remember to mention simultaneous moves**
 
-**TODO**
+Objectives
+----------
+
+**TODO: be more clear about goals here**
+
+-   Classify Bitswap strategy functions
+    -   Conditions where useful
+-   **Analytical work:** Repeated game model
+-   **Empirical work:** Simulations
 
 Preliminary Results
 ===================
@@ -148,8 +158,8 @@ Symbolic Analysis
 -   Intractable for nontrivial strategy functions
     -   **Next step:** Alternative functions/representations
 
-Go-IPFS and IPTB
-----------------
+Implementation
+--------------
 
 -   Beta strategy-integration into `go-ipfs`
 -   IPTB: IPFS nodes in Docker containers
@@ -180,4 +190,4 @@ Timeline
 TODO
 ----
 
-**TODO: need this?**
+**TODO: need this**
