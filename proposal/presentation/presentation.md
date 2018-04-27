@@ -65,14 +65,6 @@ IPFS Network as Graph
 -   *Nodes*: Users
 -   *Edges*: Peerings; unweighted, undirected
 
-Game
-----
-
--   *Infinitely repeated*
-    -   Discrete rounds, denoted by $t$
--   *Static*
--   *Incomplete information*
-
 Reputation
 ----------
 
@@ -84,15 +76,27 @@ $$
 d_{ji}^t = \frac{b_{ji}^{t-1}}{b_{ij}^{t-1}\:+\:1}
 $$
 
-Strategy
---------
+Game Formulation
+----------------
+
+### Characteristics
+
+-   *Players*: Users/nodes
+-   *Infinitely repeated*
+    -   Discrete rounds, denoted by $t$
+-   *Static*
+-   *Incomplete information*
+
+Game Formulation
+----------------
+
+### Strategy
 
 -   Reciprocation function
     -   *Input*: peer debt ratio
     -   *Output*: peer weight
     -   $S_j(d_{ji}^t, \mathbf{d}_j^{-i,t}) \in \{0, 1\}$
 -   Peers served via weighted round-robin
-
 
 Preliminary Results
 ===================
