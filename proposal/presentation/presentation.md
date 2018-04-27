@@ -28,7 +28,15 @@ Bitswap
 -   IPFS's block exchange protocol
 -   Inspired by BitTorrent
 -   *Given a set of peers who want data, how to allocate resources?*
-    -   Strategy function
+    -   Reciprocation function
+
+Bitswap
+-------
+
+*Given a set of peers who want data, how to allocate resources?*
+
+-   Ever user maintains reputation for each peer
+-   Very complex dynamics
 
 Objectives
 ----------
@@ -45,7 +53,7 @@ Analytical Work
 ---------------
 
 1.  **Repeated game analysis**
-    -   Balance model accuracy with complexity
+    -   Balances model accuracy with complexity
 2.  **Evolutionary game theory** (if time allows)
     -   Good model, but high complexity
 
@@ -85,7 +93,7 @@ System Model
 
 ### Game
 
--   *Infinitely repeated* **TODO: is this true re: infinitely?**
+-   *Infinitely repeated*
     -   Discrete rounds, denoted by $t$
 -   *Static*
 -   *Incomplete information*
@@ -130,18 +138,23 @@ Strategy Simulator
 
 **TODO: figures illustrating full exchange example**
 
-Repeated Game Analysis
-----------------------
+Strategy Simulator
+------------------
+
+### Conclusions
+
+-   Homogeneous resource distributions
+    -   Any RF (trivially) NE
+-   Non-homogeneous resource distributions
+    -   NE not yet found
+
+Symbolic Analysis
+-----------------
 
 -   Verified results of strategy simulator
 -   Mathematica notebook
 -   Intractable for nontrivial strategy functions
     -   **Next step:** Alternative functions/representations
-
-Repeated Game Analysis
-----------------------
-
-**TODO: show/summarize results**
 
 Go-IPFS and IPTB
 ----------------
