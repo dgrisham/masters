@@ -116,8 +116,6 @@ Simulations
 Preliminary Results
 ===================
 
-**TODO: graphic for this?**
-
 Strategy Simulator
 ------------------
 
