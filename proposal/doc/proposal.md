@@ -290,6 +290,9 @@ prove this for the other functions. Additionally, we've proven that all three
 functions are NEs under homogeneous resource distributions and for any initial
 ledger distribution.
 
+The output of the Mathematica notebook that shows these conclusions is included
+with this document.
+
 Implementation
 --------------
 
