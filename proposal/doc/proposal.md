@@ -70,7 +70,7 @@ reward long-lasting, healthy relationships and punish defectors. In order to
 find functions with this quality, we turn to game-theoretical modeling and
 simulations. Game theory may be used to analyze Bitswap strategies for a very
 small number of peers. However, as the size of the network increases, the
-complexity explodes and an analytical approach quickly becomes infesaible.
+complexity explodes and an analytical approach quickly becomes infeasible.
 Simulations will be leveraged to help glean empirical insights into the
 larger-scale system dynamics, which will be compared with the small-scale
 theoretical analysis. Further, as the simulations take network effects such as
@@ -109,16 +109,8 @@ The objectives of this project are:
 [^link:iptb]: <https://github.com/ipfs/iptb>
 [^link:bitswap-tests]: <https://github.com/dgrisham/bitswap-tests>
 
-Preliminary Results
-===================
-
-This section details the results obtained so far. The system model is described
-first (\cref{system-model}), followed by the simulator
-(\cref{strategy-simulator}), then the analytical work (\cref{analytical}), and
-finally the implementation progress (\cref{go-ipfs-and-iptb}).
-
 System Model
-------------
+============
 
 This section details the model currently used to describe Bitswap in this work.
 This model is the product of multiple iterations that approached a balance
@@ -131,7 +123,8 @@ space has been modified to better fit the Bitswap scenario.[^old-model-link]
 [^old-model-link]: A description of the model from the previous iteration
 <https://github.com/dgrisham/masters/tree/master/deprecated/analysis>.
 
-### Network Graph
+Network Graph
+-------------
 
 We model an IPFS swarm as a network \Network of $\abs{\Network}$ users. The
 graphical representation consists of
@@ -144,30 +137,26 @@ A user's *neighborhood* is their set of peers, i.e. the set of nodes that the
 user is connected to by an edge. User $i$'s neighborhood is denoted by
 $\Nbhd{i} \subseteq \Network$.
 
-**TODO: anything else to add here?**
+Reputation
+----------
 
-### Game Formulation
+We break Bitswap interactions into discrete rounds, with a single round denoted
+by a nonnegative integer $t$. The following two points describe the way data
+distribution takes place in this Bitswap model. Each of these points simplifies
+the problem from the real-world scenario.
 
-All users in the network participate in the Bitswap game. The Bitswap game is an
-*infinitely repeated*, *incomplete information* game in which users exchange
-data. The game takes place over discrete *rounds* with a single round denoted by
-$t$, where $t$ is a nonnegative integer. The *players* are the IPFS users in the
-network \Network.
-
-We also include two simplifying constraints:
-
-1.  Each user distributes exactly $B$ bits to each of their peers in a given
-    round (and has sufficient resources to do so).
+1.  Each user distributes exactly $B$ bits, where $B > 0$, to each of their
+    peers in a given round (and has sufficient resources to do so).
 2.  All users always have unique data that all of their peers want. So, when a
     user allocates $b$ bits to a particular peer, that user has at least $b$
     bits that the peer wants.
 
-We define $b_{ji}^t$ as the total number of bits sent from user $j$ to peer $i$
+We define $b_{ij}^t$ as the total number of bits sent from user $i$ to peer $j$
 from round $0$ to $t-1$. Then we can define the *debt ratio* $d_{ji}$ from user
-$j$ to peer $i$ as
+$i$ to peer $j$ as
 
 $$
-d_{ji}^t = \frac{b_{ji}^{t-1}}{b_{ij}^{t-1}\:+\:1}
+d_{ji}^t = \frac{b_{ij}^{t-1}}{b_{ji}^{t-1}\:+\:1}
 $$
 
 $d_{ji}^t$ can be thought of as peer $i$'s reputation from the perspective of
@@ -175,10 +164,39 @@ user $j$. This reputation is then considered by user $j$'s *reputation function*
 $S_j(d_{ji}^t, \mathbf{d}_j^{-i,t}) \in \{0, 1\}$, where
 $\mathbf{d}_j^{-i,t} = (d_{jk}^t \mid \forall k \in \Nbhd{j}, k \neq i)$ is the
 vector of debt ratios for all of user $j$'s peers in round $t$ *excluding* peer
-$i$. A player's choice of reputation function is their *strategy*. The
-reputation function considers the relative reputation of peer $i$ to the rest of
-$j$'s peers, and returns a weight for peer $i$. This weight is used to determine
-what proportion of $j$'s resources to allocate to peer $i$ in round $t$.
+$i$. The reputation function considers the relative reputation of peer $i$ to
+the rest of $j$'s peers, and returns a weight for peer $i$. This weight is used
+to determine what proportion of $j$'s resources to allocate to peer $i$ in round
+$t$. Given all of this, we can calculate $b_{ij}^{t+1}$ given $\mathbf{d}_j^t$:
+
+$$
+b_{ji}^{t+1} = \frac{S_j(d_{ji}^t, \mathbf{d}_j^{-i,t})}
+    {\sum_{k \in \Nbhd{j}} S_j(d_{jk}^t, \mathbf{d}_j^{-k,t})} B
+$$
+
+Game Formulation
+----------------
+
+All users in the network participate in the Bitswap game. The players in this
+game are the users in the IPFS network, and each player's strategy is the
+reciprocation function they choose to assign weights to their peers. The Bitswap
+game is an *infinitely repeated*, *incomplete information* game in which users
+exchange data. One game takes place between each pair of peers for each round
+$t$. The *players* are the IPFS users in the network \Network. The utility of
+player $i$ in round $t$ is the sum of all of the data that $i$ is sent by its
+peers in that round:
+
+\begin{align*}
+u_i^t &= \sum_{j \in \Nbhd{i}} b_{ji}^t
+\end{align*}
+
+Preliminary Results
+===================
+
+This section details the results obtained so far. The system model is described
+first (\cref{system-model}), followed by the simulator
+(\cref{strategy-simulator}), then the analytical work (\cref{analytical}), and
+finally the implementation progress (\cref{go-ipfs-and-iptb}).
 
 Strategy Simulator
 ------------------
@@ -375,4 +393,4 @@ July
 -   Finish up simulations
 -   Primary focus: thesis
     -   Visualizations, formatting, explaining results, etc.
--   Tuesday, July 24th: Thesis submission due
+-   Tuesday, July 24\tsps{th}: Thesis submission due

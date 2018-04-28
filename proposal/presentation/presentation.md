@@ -41,12 +41,11 @@ Bitswap
 Objectives
 ----------
 
-**TODO: describe using terminology defined already, no more**
-
--   Classify Bitswap strategy functions
-    -   Conditions where useful
--   **Analytical work:** Repeated game model
--   **Empirical work:** Simulations
+-   Discover Bitswap peer behavior that gives desired behavior
+    -   Will depend on conditions
+    -   Break down Bitswap dynamics
+-   Analytical and empirical analyses
+-   Implementation
 
 System Model
 ============
@@ -60,9 +59,11 @@ IPFS Network as Graph
 Reputation
 ----------
 
+-   Each user distributes $B$ bits among peers in each round
 -   $b_{ji}^t$: Total bits sent from user $j$ to peer $i$ from round $0$ to
     $t-1$
--   $d_{ji}$: *debt ratio* $j$ to peer $i$
+-   $d_{ji}$: *debt ratio* of $j$ as viewed by $i$
+    -   Used as peer-wise reputation
 
 $$
 d_{ji}^t = \frac{b_{ji}^{t-1}}{b_{ij}^{t-1}\:+\:1}
@@ -79,8 +80,11 @@ Reciprocation Function
 Data Distribution
 -----------------
 
--   Peers served via weighted round-robin
-    -   $B$ bits distributed to peers based on relative weights
+$B$ bits distributed among peers via weighted round-robin
+
+$$
+w_{ij}
+$$
 
 **TODO: show this with math**
 

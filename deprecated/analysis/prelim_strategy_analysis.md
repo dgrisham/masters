@@ -81,8 +81,8 @@ the following properties:
 
 We also include two simplifying constraints:
 
-1.  Each user distributes exactly $B$ bits to each of their peers in a given
-    round (and has sufficient resources to do so).
+1.  Each user distributes exactly $B$ bits, where $B > 0$, to each of their
+    peers in a given round (and has sufficient resources to do so).
 2.  All users always have unique data that all of their peers want. So, when a
     user allocates $b$ bits to a particular peer, that user has at least $b$
     bits that the peer wants.
