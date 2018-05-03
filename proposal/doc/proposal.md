@@ -46,7 +46,7 @@ this submodule is the BitTorrent peer-to-peer file distribution protocol.
 Bitswap is the layer of IPFS that incentivizes users to share data. A Bitswap
 *reciprocation function* determines which peers to send data to, and in what
 relative quantities. The input to the reputation function is a set of metrics
-that may be used to weight peers -- e.g. peer bandwidth, reputation, and/or
+that may be used to weigh peers -- e.g. peer bandwidth, reputation, and/or
 location. The output is a set of weights, one for each peer, that assign the
 relative resource allocations for the peers. These weights are periodically
 recalculated to reflect changes in both the network and peer behavior.
