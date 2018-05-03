@@ -1,9 +1,13 @@
 % imports
-\usecolortheme{whale}
+%\usecolortheme{whale}
 \usepackage{booktabs}
 \usepackage{caption}
 \usepackage{graphicx}
+%\usepackage{mathtools}
 %\usepackage{multirow,array}
+
+\newcommand{\Network}{\ensuremath{\mathcal{N}}}
+\newcommand{\Nbhd}[1]{\ensuremath{\mathcal{N}_{#1}}}
 
 \definecolor{beige}{rgb}{0.96, 0.96, 0.86}
 \def\semitrans{\color{red}}
@@ -23,7 +27,7 @@
 \newcommand{\graphic}[1]{\center \includegraphics[width=4in]{#1}}
 \newcommand{\graphicc}[2]{\begin{figure}\center
     \includegraphics[width=4in]{#1}\caption{#2}\end{figure}}
-\newcommand{\graphicw}[2]{\center \includegraphics[width=#2]{#1}}
+\newcommand{\graphicw}[2]{\center \includegraphics[width=#1]{#2}}
 \newcommand{\graphiccw}[3]{\begin{figure}\center
     \includegraphics[width=#2]{#1}\caption{#3}\end{figure}}
 %\newcommand{\green}[1]{\textcolor{green}{#1}}

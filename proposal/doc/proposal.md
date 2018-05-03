@@ -212,8 +212,8 @@ on the allocations given by `rf` and `initial_ledgers`. Then, we calculate the
 amount of data peer 0 receives in the following round, `t=1`. This amount of
 data is 0's payoff $p_0$.
 
-**Deviating runs**: Users `1` and `2` allocate data to their peers for round
-`t=0` based on `rf` and `initial_ledgers`, while user 0 tries every possible
+**Deviating runs**: Users 1 and 2 allocate data to their peers for round `t=0`
+based on `rf` and `initial_ledgers`, while user 0 tries every possible
 allocation, to a resolution of `deviation` (one allocation per run). So, if
 `deviation` is 1 and `resources[0] = 10`, user 0 will try the allocations
 `(0, 10)`, `(1, 9)`, `(2, 8)`, ..., `(10, 0)`, where the first element of each
