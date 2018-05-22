@@ -382,30 +382,19 @@ The objectives of this project are:
 Timeline
 ========
 
-April
------
+May
+---
 
-### Week 3 (4/16 - 4/20)
+### Week 4 (5/21 - 5/25)
 
--   Analytical results (via Mathematica notebook)
-    -   Characterize results
 -   Start thesis layout
--   IPTB simulations
-    -   Preparation, figure out important test cases
-
-### Week 4 (4/23 - 4/27)
-
--   Thesis layout
 -   Analytical work
     -   Figure out where to go based on results so far
 -   IPTB simulations
     -   Preparation/running
     -   Start working on visualizations for results
 
-May
----
-
-### Week 1 (4/30 - 5/4)
+### Week 5 (5/28 - 6/1)
 
 -   IPTB simulations
     -   Re-evaluate progress and important test cases
@@ -415,7 +404,10 @@ May
 -   Start writing thesis
     -   Intro/background -- IPFS, Bitswap, motivation
 
-### Week 2 (5/7 - 5/11)
+June
+----
+
+### Week 1 (6/4 - 6/8)
 
 -   IPTB simulations
 -   Analytical work
@@ -424,7 +416,7 @@ May
     -   Intro/background -- approach, explain why Bitswap analysis with game
         theory is hard
 
-### Week 3 (5/14 - 5/18)
+### Week 2 (6/11 - 6/15)
 
 -   IPTB simulations
     -   Re-evaluate progress and important test cases
@@ -433,7 +425,7 @@ May
 -   Thesis writing
     -   Explain analytical results, use graphs from `strategy-sim` if helpful
 
-### Week 4 (5/23 - 5/25)
+### Week 3 (6/18 - 6/22)
 
 -   IPTB simulations
 -   Analytical work
@@ -442,7 +434,7 @@ May
     -   Explain analytical results, use graphs from `strategy-sim` if helpful
     -   Start describing IPTB simulation testbed
 
-### Week 5 (5/28 - 6/1)
+### Week 4 (6/25 - 6/29)
 
 -   IPTB simulations
     -   Re-evaluate progress and important test cases
@@ -451,17 +443,6 @@ May
     -   Explain analytical results, use graphs from `strategy-sim` if helpful
     -   Start describing IPTB simulation testbed
 
-June
-----
-
--   Continue IPTB simulations
-    -   Re-evaluate current state periodically
--   Analytical work
-    -   Loop on re-orienting trajectory + moving forward
--   Thesis writing
-    -   Characterize results as they come
-    -   Plots and visualizations
-    -   Go to writing center to review formatting
 
 July
 ----

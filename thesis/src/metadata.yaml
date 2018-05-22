@@ -1,0 +1,24 @@
+---
+biblio-files: papers
+biblio-style: IEEEtranN-nourl # custom BST to ignore URLs in papers.bib
+title: "Hey hey you you I don't like your ti-tle: An empirical study"
+
+author:
+    - name: David Grisham
+      affiliation: Colorado School of Mines
+      location: Golden, CO
+      email: dgrisham@mines.edu
+
+keyword:
+      - this is it
+
+graphics: yes
+numbersections: yes
+
+abstract: |
+    Welcome to my paper!
+
+# don't delete this line, bud
+...
+
+

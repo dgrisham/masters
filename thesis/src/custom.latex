@@ -1,0 +1,56 @@
+% 'extends the array and column environments'
+% \usepackage{array}
+
+% for tables that span > 1 page
+% \usepackage{longtable}
+
+% rotate text/figures/tables/etc.
+% \usepackage{rotating}
+
+% for refs -- commented out in lhillber's
+% \usepackage{natbib}
+
+% hyper links
+\usepackage{hyperref}
+
+% for landscape pages (redundant w/ `rotating` ?)
+% \usepackage{pdflscape}
+
+% math typesetting
+%\usepackage{amsmath}
+
+% extends/fixes `amsmath`
+%\usepackage{mathtools}
+
+% fonts (specifically math?)
+%\usepackage{bbm}
+
+% extended symbol fonts, part of `amsfonts`
+%\usepackage{amssymb}
+
+% rsfs font for math; `\mathscr` over `\mathcal`
+%\usepackage{mathrsfs}
+
+% syntax highlighting for code
+\usepackage{listings}
+
+% enables 'ragged' alignment; req'd for csm-thesis.sty?
+\usepackage{ragged2e}
+
+% extended control for captions
+% `labelsep=quad` puts `\quad` space between e.g. "Figure 1" and caption text
+\usepackage[labelsep=quad]{caption}
+
+\usepackage{csm-thesis}
+
+\captionsetup[lstlisting]{font={stretch=1}}
+
+\title{Game Theoretical Analysis of Resource Allocation in the InterPlanetary File System}
+
+\degreetitle{Master of Science}
+\discipline{Computer Science}
+\department{Computer Science}
+
+\author{David M. Grisham}
+\advisor{Dejun Yang}
+\dpthead{Tracy Camp}{Head}

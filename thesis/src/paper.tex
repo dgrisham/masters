@@ -1,0 +1,209 @@
+\documentclass[12pt,letterpaper,]{article}
+
+
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+
+
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+
+
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={},
+            pdftitle={Hey hey you you I don't like your ti-tle: An empirical study},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage[numbers,square]{natbib}
+\bibliographystyle{IEEEtranN-nourl}
+
+
+\usepackage{listings}
+
+
+
+
+
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\graphicspath{ {./figures/} }
+
+
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+
+
+\title{Hey hey you you I don't like your ti-tle: An empirical study}
+
+\author{true}
+
+\date{}
+
+% 'extends the array and column environments'
+% \usepackage{array}
+
+% for tables that span > 1 page
+% \usepackage{longtable}
+
+% rotate text/figures/tables/etc.
+% \usepackage{rotating}
+
+% for refs -- commented out in lhillber's
+% \usepackage{natbib}
+
+% hyper links
+\usepackage{hyperref}
+
+% for landscape pages (redundant w/ `rotating` ?)
+% \usepackage{pdflscape}
+
+% math typesetting
+%\usepackage{amsmath}
+
+% extends/fixes `amsmath`
+%\usepackage{mathtools}
+
+% fonts (specifically math?)
+%\usepackage{bbm}
+
+% extended symbol fonts, part of `amsfonts`
+%\usepackage{amssymb}
+
+% rsfs font for math; `\mathscr` over `\mathcal`
+%\usepackage{mathrsfs}
+
+% syntax highlighting for code
+\usepackage{listings}
+
+% enables 'ragged' alignment; req'd for csm-thesis.sty?
+\usepackage{ragged2e}
+
+% extended control for captions
+% `labelsep=quad` puts `\quad` space between e.g. "Figure 1" and caption text
+\usepackage[labelsep=quad]{caption}
+
+\usepackage{csm-thesis}
+
+\captionsetup[lstlisting]{font={stretch=1}}
+
+\title{Game Theoretical Analysis of Resource Allocation in the InterPlanetary File System}
+
+\degreetitle{Master of Science}
+\discipline{Computer Science}
+\department{Computer Science}
+
+\author{David M. Grisham}
+\advisor{Dejun Yang}
+\dpthead{Tracy Camp}{Head}
+
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+\begin{document}
+\frontmatter
+
+\maketitle
+\newpage
+
+\makecopyright{\the\year}
+\newpage
+
+\makesubmittal
+\newpage
+
+\begin{abstract}
+Welcome to my paper!
+\end{abstract}
+
+\newpage
+
+
+
+\hypersetup{linkcolor=black}
+\setcounter{tocdepth}{2}
+\tableofcontents
+
+\listoffiguresandtables
+
+%%
+\bodymatter
+
+% TODO: difference between bodymatter and body??
+\hypertarget{introduction}{%
+\chapter{Introduction}\label{introduction}}
+
+Here it is, fam.
+
+\hypertarget{welcome-to-the-machine}{%
+\subsection{Welcome to the Machine}\label{welcome-to-the-machine}}
+
+Welcome, my son\ldots{}welcomeeee
+
+\hypertarget{animals}{%
+\subsection{Animals}\label{animals}}
+
+Am I lucky???
+
+that's all
+
+\hypertarget{background}{%
+\chapter{Background}\label{background}}
+
+Yeeeeeee.
+
+                \bibliography{papers}
+
+    
+
+\end{document}
