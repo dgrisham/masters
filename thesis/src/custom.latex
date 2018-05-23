@@ -16,11 +16,8 @@
 % for landscape pages (redundant w/ `rotating` ?)
 % \usepackage{pdflscape}
 
-% math typesetting
-%\usepackage{amsmath}
-
-% extends/fixes `amsmath`
-%\usepackage{mathtools}
+% math typesetting; extends/fixes `amsmath`
+\usepackage{mathtools}
 
 % fonts (specifically math?)
 %\usepackage{bbm}
@@ -37,9 +34,20 @@
 % enables 'ragged' alignment; req'd for csm-thesis.sty?
 \usepackage{ragged2e}
 
+\usepackage{graphicx}
+
 % extended control for captions
 % `labelsep=quad` puts `\quad` space between e.g. "Figure 1" and caption text
 \usepackage[labelsep=quad]{caption}
+
+% format references
+
+\usepackage{cleveref}
+\crefformat{section}{\S#2#1#3}
+\crefformat{subsection}{\S#2#1#3}
+\crefformat{subsubsection}{\S#2#1#3}
+\crefrangeformat{section}{\S\S#3#1#4 to~#5#2#6}
+\crefmultiformat{section}{\S\S#2#1#3}{ and~#2#1#3}{, #2#1#3}{ and~#2#1#3}
 
 \usepackage{csm-thesis}
 
@@ -54,3 +62,19 @@
 \author{David M. Grisham}
 \advisor{Dejun Yang}
 \dpthead{Tracy Camp}{Head}
+
+% aliases
+
+%% graphics
+
+\newcommand{\graphicw}[2]{\center \includegraphics[width=#2]{#1}}
+\newcommand{\graphicwc}[3]{\begin{figure}\center
+    \includegraphics[width=#2]{#1}\caption{#3}\end{figure}}
+\newcommand{\graphicwlc}[5]{\begin{figure}\center
+    \includegraphics[width=#2]{#1}\caption[#4]{#5}\label{#3}\end{figure}}
+
+%% math notation
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\newcommand{\Network}{\ensuremath{\mathcal{N}}}
+\newcommand{\Nbhd}[1]{\ensuremath{\mathcal{N}_{#1}}}
