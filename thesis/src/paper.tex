@@ -388,12 +388,21 @@ peers for each round \(t\). The \emph{players} are the IPFS users in the
 network \Network. The utility of player \(i\) in round \(t\) is the sum
 of all of the data that \(i\) is sent by its peers in that round:
 
+\[
+u_i^t = \sum_{j \in \Nbhd{i}} (b_{ji}^t - b_{ji}^{t-1})
+\]
+
+The total utility of a peer over the entire repeated game, then, can be
+expressed in the following ways:
+
 \begin{align*}
-u_i^t &= \sum_{j \in \Nbhd{i}} (b_{ji}^t - b_{ji}^{t-1})
+U_i &= \sum_{t=0}^{\infty} u_i^t \\
+U_i &= \sum_{j \in \Nbhd{i}} b_{ji}^\infty
 \end{align*}
 
-\textbf{TODO: update this to include the total utility of a peer,}
-\(U_i\)\textbf{, as defined in the proposal presentation.}
+The latter representation can be most directly thought of as the total
+amount of data that peer \(i\) receives from all of its peers over the
+entire duration of the Bitswap game.
 
                 \bibliography{papers}
 

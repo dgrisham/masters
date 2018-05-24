@@ -9,7 +9,7 @@ EXTRA_FILES	= $(shell find ./extra -name '*.md' | sort)
 
 DEP_FILES	= Makefile metadata.yaml $(CLS_FILES) $(BIB_FILES) $(LATEX_FILES) $(MD_FILES) $(FIG_FILES)
 
-all: clean $(PAPER).{tex,pdf} tidy
+all: clean $(PAPER).pdf tidy
 
 .ONESHELL edit:
 	make view &> /dev/null
