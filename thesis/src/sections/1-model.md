@@ -73,12 +73,12 @@ Game Formulation
 ----------------
 
 The game model presented here is the product of multiple iterations that
-approached a balance between the accuracy of the model to the problem and model
-complexity. Previous modeling approaches included tools from evolutionary game
-theory and statistical mechanics on the high complexity end, and repeated games
-on the low accuracy end. While the current model uses a repeated game model as
-well, the strategy space has been modified to better fit the Bitswap
-scenario.[^old-model-link]
+approached a balance between the accuracy of the model to actual Bitswap
+interactions model complexity. Previous modeling approaches included tools from
+evolutionary game theory and statistical mechanics on the high complexity end,
+and repeated games on the low accuracy end. While the current model uses a
+repeated game model as well, the strategy space has been modified to better fit
+the Bitswap scenario.\[\^old-model-link\]
 
 [^old-model-link]: A description of the model from the previous iteration can be
 found at <https://github.com/dgrisham/masters/tree/master/deprecated/analysis>.
@@ -109,3 +109,17 @@ U_i &= \sum_{j \in \Nbhd{i}} b_{ji}^\infty
 The latter representation can be most directly thought of as the total amount of
 data that peer $i$ receives from all of its peers over the entire duration of
 the Bitswap game.
+
+Discussion
+----------
+
+**TODO**
+
+(Complexity of the model (roughly/layman's terms); brief glimpse of it compared
+to an evolutionary game model and maybe my old repeated game model; how this
+compromises between those two to be a realistic but manageably complex model.)
+
+The points in this section should then be related to each of my contributions:
+analytical, simulation, and implementation work. Would make sense to do that at
+the beginning of the next section, probably, or whatever section introduces
+those things.
